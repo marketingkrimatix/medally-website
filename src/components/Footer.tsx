@@ -28,7 +28,6 @@ const Footer: FC = () => {
     { name: 'Contact Us', path: 'https://www.calonji.com/contact', isExternal: true },
     { name: 'Privacy Policy', path: 'https://www.calonji.com/privacy-policy', isExternal: true },
     { name: 'Terms of Service', path: 'https://www.calonji.com/terms-of-service', isExternal: true },
-    { name: 'SOAP', path: '/soap-notes-feature', isExternal: false },
   ];
 
   const socialLinks = [

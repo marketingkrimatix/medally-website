@@ -148,7 +148,7 @@ const HowItWorks: FC = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="relative"
             >
-              <div className="flex flex-col md:flex-row items-start gap-6 mb-16 relative z-10">
+              <div className="flex flex-col md:flex-row items-start gap-0 md:gap-6 mb-16 relative z-10">
                 <div className="flex-shrink-0">
                   <div
                     className={`w-20 h-20 rounded-2xl bg-gradient-to-br from-${step.color}-500 to-${step.color}-600 flex items-center justify-center text-white shadow-lg transform transition-transform duration-300 hover:scale-110 hover:rotate-3`}
@@ -160,14 +160,17 @@ const HowItWorks: FC = () => {
                 <div className="flex-grow pt-2">
                   <div className="flex items-center mb-3">
                     <div
-                      className={`p-3 mr-4 rounded-full bg-${step.color}-100 text-${step.color}-600`}
+                      className={`p-3 mx-2 md:mr-4 rounded-full bg-${step.color}-100 text-${step.color}-600`}
                     >
                       {step.icon}
                     </div>
+                    <div>
                     <h3 className="text-2xl md:text-3xl font-bold">{step.title}</h3>
+                  <p className="md:hidden text-lg text-gray-600 mb-4">{step.description}</p>
+                  </div>
                   </div>
 
-                  <p className="text-lg text-gray-600 mb-4">{step.description}</p>
+                  <p className="hidden md:block text-lg text-gray-600 mb-4">{step.description}</p>
 
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
@@ -226,17 +229,15 @@ const HowItWorks: FC = () => {
               </div>
 
               {/* Connector line for mobile */}
-              {index < steps.length - 1 && (
                 <div className="md:hidden absolute left-10 top-20 bottom-0 w-1 bg-gray-200 z-0 rounded-full">
                   <motion.div
                     initial={{ height: 0 }}
                     whileInView={{ height: '100%' }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className={`w-full bg-gradient-to-b from-${step.color}-500 to-${steps[index + 1].color}-500 rounded-full`}
+                    className={`w-full bg-gradient-to-b from-${step.color}-500 to-${steps[index].color}-500 rounded-full`}
                   />
                 </div>
-              )}
             </motion.div>
           ))}
         </div>

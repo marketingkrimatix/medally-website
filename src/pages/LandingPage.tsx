@@ -172,7 +172,7 @@ const LandingPage: FC = () => {
       {/* Visually hidden H1 for SEO - the visual H1 is in the Hero component */}
       <h1 className="sr-only">MedAlly - AI-Powered Healthcare Assistant for Physicians</h1>
 
-      <main className='min-h-screen mt-12'>
+      <main className='min-h-screen mt-16'>
         <section id="hero">
           <Hero />
         </section>
