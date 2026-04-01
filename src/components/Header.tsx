@@ -77,6 +77,11 @@ const Header: FC = () => {
       href: '/blogs',
       icon: <Newspaper className="w-4 h-4" />,
     },
+    {
+      name: 'SOAP',
+      href: '/soap-notes-feature',
+      icon: <Newspaper className="w-4 h-4" />,
+    },
   ];
 
   return (
