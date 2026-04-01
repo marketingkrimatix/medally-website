@@ -64,6 +64,11 @@ export default function ShareArticleSection({
   const iconBtn =
     'inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:border-[#36b6b4] hover:text-[#36b6b4]'
 
+    const canShare =
+  typeof window !== 'undefined' &&
+  typeof navigator !== 'undefined' &&
+  'share' in navigator;
+
   return (
     <section className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#36b6b4]">
@@ -81,7 +86,7 @@ export default function ShareArticleSection({
           <span>{copied ? 'Copied' : 'Copy link'}</span>
         </button>
 
-        {typeof navigator !== 'undefined' && navigator.share && (
+        {canShare && (
           <button
             type="button"
             onClick={handleNativeShare}

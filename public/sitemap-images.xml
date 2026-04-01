@@ -5,7 +5,7 @@
 >
   <url>
     <loc>https://www.medally.ai/</loc>
-    <lastmod>2025-03-06</lastmod>
+    <lastmod>2026-04-01</lastmod>
 
     <image:image>
       <image:loc>https://www.medally.ai/favicon.svg</image:loc>
@@ -15,6 +15,11 @@
     <image:image>
       <image:loc>https://www.medally.ai/grid.svg</image:loc>
       <image:title>MedAlly - grid.svg</image:title>
+      <image:caption>MedAlly healthcare AI assistant image</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.medally.ai/logo-v1.svg</image:loc>
+      <image:title>MedAlly - logo-v1.svg</image:title>
       <image:caption>MedAlly healthcare AI assistant image</image:caption>
     </image:image>
     <image:image>

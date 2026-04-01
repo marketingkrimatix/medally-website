@@ -1,4 +1,7 @@
 // src/types/blog.ts
+import type { TypedObject } from '@portabletext/types'
+import type { SanityImageObject } from '@sanity/image-url'
+
 export interface Author {
   name?: string
   image?: unknown
@@ -9,8 +12,8 @@ export interface BlogPost {
   title: string
   slug: string
   excerpt: string
-  content?: unknown[]
-  featuredImage?: unknown
+  content?: TypedObject[]
+  featuredImage?: SanityImageObject | null
   category:
     | 'Industry News'
     | 'Technology'
